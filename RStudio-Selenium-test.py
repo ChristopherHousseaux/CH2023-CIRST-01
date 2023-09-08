@@ -23,7 +23,6 @@ driver = webdriver.Chrome(options=options)
 
 # visit web homepage
 driver.get(toscrape)
-time.sleep(5)
 
 # print elements available through Selenium commands - anything with a hashtag after this is an individual successful attempt
 
