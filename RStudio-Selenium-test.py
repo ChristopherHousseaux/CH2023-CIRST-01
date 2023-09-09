@@ -35,15 +35,13 @@ driver.get(scrapethissite)
 driver.implicitly_wait(10)
 
 # print elements available through Selenium commands - anything with a hashtag after this is an individual successful attempt
-# print(driver.find_element(By.XPATH, "/html/body").text)
-# print(driver.find_element(By.XPATH, "/html/body/div/div/div/div/section/div[2]/ol/li[2]").text)
-# print(driver.find_element(By.XPATH, "/html/body/div/div/div/div/section/div[2]/ol").text)
-# print(driver.title)
-# print(driver.current_url)
+# print(driver.find_element(By.XPATH, "/html/body/div/section/div").text)
 
-# country_name = driver.find_element(By.XPATH, "/html/body/div/section/div/div[4]").text
-country_name = driver.find_elements(By.CLASS_NAME, 'country-name')
-for element in country_name:
-    print(element.get_attribute('innerHTML'))
+country_name_list = []
+country_name = driver.find_elements(By.CLASS_NAME, "country-name")
+for e in country_name:
+    print(e.text)
 
+df = pd.DataFrame(country_name,columns=['country name'])
+df.to_csv('country_name.csv', index=False)
 driver.quit()
