@@ -46,5 +46,4 @@ country_name = driver.find_elements(By.CLASS_NAME, 'country-name')
 for element in country_name:
     print(element.get_attribute('innerHTML'))
 
-
 driver.quit()
