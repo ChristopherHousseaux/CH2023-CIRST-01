@@ -35,7 +35,6 @@ table_all = len(driver.find_elements(By.XPATH,'//*[@id="tblListeJournal"]/tbody/
 print(table_all)
 
 # creating empty list to save data:
-final_list = []
 date = []
 assemblee =[]
 session = []
