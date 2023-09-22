@@ -85,7 +85,7 @@ df=pd.DataFrame(list(zip(date,assemblee,session,version,mandats)),
                columns =['Date', 'Assemblee', 'Session','Version','Mandats'])
 
 print(df)
-df.to_csv('list.csv')
+df.to_csv('ANQ_list.csv.zip', index=False)
 driver.quit()
 
 # FIND ELEMENTS OPTIONS (TEST 1)
